@@ -6,8 +6,10 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     mkdir ~/.DTL/luncher
     mkdir ~/.DTL/apps
     mkdir ~/.DTL/custom
-    git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/luncher
-    
+    mkdir ~/.DTL/temp
+    git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/temp
+
+
 else
     echo "Canceled."
     exit 0
