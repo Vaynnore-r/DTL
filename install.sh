@@ -16,7 +16,7 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
         echo "
         ## DTL commands
-        alias dtl ='~/.DTL/launcher/launcher.sh'
+        alias dtl='~/.DTL/launcher/launcher.sh'
         " >> ~/.bashrc
         source .bashrc
     fi
