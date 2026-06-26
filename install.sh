@@ -1,17 +1,22 @@
 #!/bin/bash
 read -p "Install Dark Triad Launcher? (y/n): " answer </dev/tty
 if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
+    read -p "Backup Curent DTL data (y/n): " answer </dev/tty
+    if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
+        mkdir ~/DTL-backup
+        mv -f ~/.DTL ~/DTL-backup
+        echo "Backup done"
+    fi
     echo "Proceeding..."
-    cd 
-    mkdir -p ~/.DTL/{launcher,apps,custom}
-    rm -rf ~/.DTL/temp
+    mkdir -p ~/.DTL/{launcher,apps,custom,temp}
     git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/temp
+    cp -f ~/.DTL/temp/launcher/* ~/.DTL/launcher
     clear
     read -p "Add dtl as terminal commend ? (use it only once to prevent bugs) (y/n): " answer </dev/tty
     if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
         echo "
         ## DTL commands
-        alias dtl ='./~/.DTL/launcher/launcher.sh'
+        alias dtl ='~/.DTL/launcher/launcher.sh'
         " >> ~/.bashrc
         source .bashrc
     fi
