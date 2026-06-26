@@ -1,12 +1,9 @@
 #!/bin/bash
-read -p "Install Dark Triad Luncher? (y/n): " answer
-
+read -p "Install Dark Triad Launcher? (y/n): " answer </dev/tty
 if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     echo "Proceeding..."
-    mkdir ~/.DTL/luncher
-    mkdir ~/.DTL/apps
-    mkdir ~/.DTL/custom
-    mkdir ~/.DTL/temp
+    mkdir -p ~/.DTL/{launcher,apps,custom}
+    rm -rf ~/.DTL/temp
     git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/temp
 
 
