@@ -12,12 +12,9 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/temp
     cp -f ~/.DTL/temp/launcher/* ~/.DTL/launcher
     clear
-    read -p "Add dtl as terminal commend ? (use it only once to prevent bugs) (y/n): " answer </dev/tty
-    if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
-        echo "
-        ## DTL commands
-        alias dtl='$HOME/.DTL/launcher/launcher.sh'
-        " >> ~/.bashrc
+    if ! grep -q "alias dtl='$HOME/.DTL/launcher/launcher.sh'" ~/.bashrc; then
+        # 2. Jeśli NIE istnieje, dopisz go na końcu pliku
+        echo "alias dtl='$HOME/.DTL/launcher/launcher.sh'" >> ~/.bashrc
         source .bashrc
     fi
 else
