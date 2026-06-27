@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. Lista Twoich 20 komend (wklej tu swoje prawdziwe nazwy)
-options=("install" "update" "start" "stop" "status" "restart" "backup" "exit")
+options=("install" "update" "start" "stop" "info" "restart" "backup" "exit")
 
 # Początkowy indeks wybranej pozycji (0 to pierwsza opcja, czyli "install")
 selected=0
@@ -66,4 +66,4 @@ if [ "$choice" == "exit" ]; then
 fi
 
 # Uruchomienie Twojego właściwego skryptu z odpowiednią nazwą
-~/.DTL/launcher/app-"$choice".sh
+~/.DTL/launcher/dtl-"$choice".sh
