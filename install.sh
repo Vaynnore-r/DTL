@@ -6,6 +6,8 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
         mkdir ~/DTL_backup
         mv -f ~/.DTL/* ~/DTL_backup
         echo "Backup done"
+    else
+        rm -rf ~/.DTL/*
     fi
     echo "Proceeding..."
     mkdir -p ~/.DTL/{launcher,apps,custom,temp}
