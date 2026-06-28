@@ -3,10 +3,11 @@ read -p "Install Dark Triad Launcher? (y/n): " answer </dev/tty
 if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     read -p "Backup Curent DTL data (y/n): " answer </dev/tty
     if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
+        rm -rf ~/DTL_backup/*
         mkdir ~/DTL_backup
         mv -f ~/.DTL/* ~/DTL_backup
         rm -rf ~/.DTL/*
-        echo "Backup done"
+        echo "Backup can be found in ~/DTL_backup"
     else
         rm -rf ~/.DTL/*
     fi

@@ -9,8 +9,8 @@ selected=0
 # Funkcja, która czyści ekran i rysuje menu od nowa przy każdym ruchu strzałką
 show_menu() {
     clear
-    echo "=== DTL MENU ==="
-    echo "Użyj STRZAŁEK i naciśnij ENTER:"
+    echo "=== Dark Triad Launcher ==="
+    echo "Move With Arrows and Enter:"
     echo "----------------------------------------"
     
     # Pętla, która wyświetla każdą opcję z listy
@@ -61,7 +61,9 @@ choice="${options[$selected]}"
 
 clear
 if [ "$choice" == "exit" ]; then
-    echo "Wyjście."
+    echo "Exit."
+    sleep 1
+    clear
     exit 0
 fi
 
