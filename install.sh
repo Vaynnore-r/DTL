@@ -5,6 +5,7 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
         mkdir ~/DTL_backup
         mv -f ~/.DTL/* ~/DTL_backup
+        rm -rf ~/.DTL/*
         echo "Backup done"
     else
         rm -rf ~/.DTL/*
