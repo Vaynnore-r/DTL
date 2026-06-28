@@ -2,7 +2,7 @@
 echo "DTL Beta "
 echo
 read -p "Go back to DTL? (y/n) :" answer </dev/tty
-if [[ "$answer" =~ ^[Ee](es)?$ ]]; then
+if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     ~/.DTL/launcher/launcher.sh
 else
     echo "Invalid Key"
