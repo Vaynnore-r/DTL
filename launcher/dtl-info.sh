@@ -1,11 +1,12 @@
 #!/bin/bash
 echo "DTL Beta "
 echo
-read -p "Press "e" to go back" answer </dev/tty
+read -p "Go back to DTL? (y/n) :" answer </dev/tty
 if [[ "$answer" =~ ^[Ee](es)?$ ]]; then
-    ~/DTL/launcher/launcher.sh
+    ~/.DTL/launcher/launcher.sh
 else
     echo "Invalid Key"
     sleep 1
+    clear
     exec "$0" "$@"
 fi
