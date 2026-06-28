@@ -12,7 +12,7 @@ if [[ "$answer" =~ ^[Yy](es)?$ ]]; then
     echo "Proceeding..."
     mkdir -p ~/.DTL/{launcher,apps,custom,temp}
     git clone https://github.com/Vaynnore-r/DTL.git ~/.DTL/temp
-    cp -f ~/.DTL/temp/launcher/* ~/.DTL/launcher
+    mv -f ~/.DTL/temp/launcher/* ~/.DTL/launcher
     clear
     if ! grep -q "alias dtl='$HOME/.DTL/launcher/launcher.sh'" ~/.bashrc; then
         echo "alias dtl='$HOME/.DTL/launcher/launcher.sh'" >> ~/.bashrc
