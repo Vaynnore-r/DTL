@@ -65,10 +65,5 @@ if [ "$choice" == "exit" ]; then
     exit 0
 fi
 
-clear
-if [ "$choice" == "info" ]; then
-    ~/.DTL/launcher/dtl-info.sh
-fi
-
 # Uruchomienie Twojego właściwego skryptu z odpowiednią nazwą
 ~/.DTL/launcher/dtl-"$choice".sh
